@@ -1,25 +1,21 @@
-import { createSlice } from "@reduxjs/toolkit";
-
-export const login = () => {
-  localStorage.setItem('authorized', '');
-  return true;
-}
-
-export const logout = () => {
-  localStorage.removeItem('authorized');
-  return false;
-}
+import { createSlice } from '@reduxjs/toolkit';
 
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
-    user: false,
+    isAuthorized: !!localStorage.getItem('authorized')
   },
   reducers: {
-    setUser: (state: any, action: any) => {
-      state.user = action.payload.user;
+    login: (state) => {
+      state.isAuthorized = true;
+      localStorage.setItem('authorized', 'true');
+    },
+    logout: (state) => {
+      state.isAuthorized = false;
+      localStorage.removeItem('authorized');
+      sessionStorage.clear()
     },
   },
-})
+});
 
-export const { setUser } = userSlice.actions;
+export const { login, logout } = userSlice.actions;

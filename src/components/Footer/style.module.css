@@ -1,16 +1,17 @@
-.header {
+.footer {
   width: 100%;
   display: flex;
   justify-content: center;
   padding: 1rem 2rem;
   background-color: #f5f5f5;
 }
-.header__content {
+.footer__container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   max-width: 1000px;
-  gap: 1rem;
+  gap: 2rem;
   h1 {
     text-wrap: nowrap;
   }
@@ -24,33 +25,22 @@
   width: 2rem;
   height: 2rem;
 }
-.search {
-  all: unset;
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-  background-color: #fff;
-  border-radius: 0.2rem;
-  width: 70%;
-}
-.nav {
+.footer__links {
+  width: 100%;
   display: flex;
   gap: 1rem;
+  a {
+    all: unset;
+    color: #666;
+    cursor: pointer;
+  }
 }
-.nav a {
-  all: unset;
+.footer__socials {
   display: flex;
-}
-@media screen and (max-width: 600px) {
-  .header {
-    padding: 1rem;
-  }
-  .logo__container {
-    display: none;
-  }
-  .search {
-    width: 100%;
-  }
-  button span {
-    display: none;
+  gap: 1rem;
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
   }
 }

@@ -1,8 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { RootTemplate } from '../templates/RootTemplate';
 import { HomePage } from '../pages/HomePage';
+import { AuthForm } from '../components/AuthForm';
+import { Cart } from '../components/Cart';
 
-// Define the routes with protection
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -11,6 +12,16 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: <HomePage />,
+        children: [
+          {
+            path: '/auth',
+            element: <AuthForm />,
+          },
+          {
+            path: '/cart',
+            element: <Cart />,
+          },
+        ],
       },
     ],
   },

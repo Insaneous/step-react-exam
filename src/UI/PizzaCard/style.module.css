@@ -1,0 +1,30 @@
+.pizzaCard {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  gap: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+.pizzaCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+.pizzaCard h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.pizzaCard p {
+  color: #666;
+}
+.pizzaCard__actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
