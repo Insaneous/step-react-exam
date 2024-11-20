@@ -1,6 +1,6 @@
+import { Link } from 'react-router-dom';
 import styles from './style.module.css';
 import logo from '/src/assets/logo.svg';
-import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   const links = [

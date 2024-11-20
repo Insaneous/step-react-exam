@@ -1,9 +1,9 @@
 import { useRef } from 'react';
-import styles from './style.module.css';
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/slice/userSlice';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../../UI/Button';
+import styles from './style.module.css';
 
 export const AuthForm = () => {
   const username = useRef<HTMLInputElement>(null);

@@ -1,6 +1,4 @@
 import { useRef } from 'react';
-import styles from './style.module.css';
-import logo from '/src/assets/logo.svg';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../redux/slice/userSlice';
@@ -8,6 +6,8 @@ import { RootState } from '../../redux/store';
 import { Button } from '../../UI/Button';
 import { clearCart } from '../../redux/slice/cartSlice';
 import { filterPizzas } from '../../redux/slice/pizzaSlice';
+import styles from './style.module.css';
+import logo from '/src/assets/logo.svg';
 
 export const Header = () => {
   const search = useRef<HTMLInputElement>(null);

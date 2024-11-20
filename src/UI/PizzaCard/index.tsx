@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { Pizza } from "../../redux/slice/pizzaSlice";
-import styles from './style.module.css';
 import { RootState } from "../../redux/store";
 import { Button } from "../Button";
 import { addToCart } from "../../redux/slice/cartSlice";
+import styles from './style.module.css';
 
 export const PizzaCard = ({ pizza }: { pizza: Pizza }) => {
   const isAuthorized = useSelector((state: RootState) => state.user.isAuthorized);
