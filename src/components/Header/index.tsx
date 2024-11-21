@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../redux/slice/userSlice';
@@ -13,9 +13,16 @@ export const Header = () => {
   const search = useRef<HTMLInputElement>(null);
   const dispatch = useDispatch();
   const isAuthorized = useSelector((state: RootState) => state.user.isAuthorized);
+  const [timeoutId, setTimeoutId] = useState<number | null>(null);
 
   const handleSearchChange = () => {
-    dispatch(filterPizzas(search.current?.value || ''));
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+    const newTimeoutId = setTimeout(() => {
+      dispatch(filterPizzas(search.current?.value || ''));
+    }, 500);
+    setTimeoutId(newTimeoutId);
   };
 
   const handleLogout = () => {

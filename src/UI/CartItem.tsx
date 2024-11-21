@@ -15,7 +15,7 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     gap: '0.5rem',
-    padding: '0.5rem 0',
+    padding: '0.5rem 0.2rem',
     borderBottom: '1px solid #ccc',
   } as CSSProperties,
   name: {
@@ -31,6 +31,7 @@ const styles = {
     border: 'var(--primary-color) solid 2px',
     color: 'var(--primary-color)',
     cursor: 'pointer',
+    fontFamily: 'Noto Emoji',
   } as CSSProperties,
 };
 

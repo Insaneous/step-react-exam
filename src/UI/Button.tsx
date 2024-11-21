@@ -12,6 +12,7 @@ const styles: { button: CSSProperties } = {
     flexWrap: 'nowrap',
     alignItems: 'center',
     gap: '0.2rem',
+    fontFamily: 'Noto Emoji',
   },
 };
 
